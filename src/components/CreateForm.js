@@ -44,7 +44,7 @@ const CreateForm = (props) => {
     //Manejar Errores
     const handleName = (e) => {
         setName(e.target.value);
-        if (e.target.value.length < 2) {
+        if (e.target.value.length < 2 && e.target.value !== "") {
             setNameError("El nombre debe tener al menos dos caracteres");
         }
         else {
@@ -54,7 +54,7 @@ const CreateForm = (props) => {
 
     const handleLastname = (e) => {
         setLastname(e.target.value);
-        if (e.target.value.length < 2) {
+        if (e.target.value.length < 2 && e.target.value !== "") {
             setLastnameError("El apellido debe tener al menos dos caracteres");
         } else {
             setLastnameError("");
@@ -63,7 +63,7 @@ const CreateForm = (props) => {
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
-        if (e.target.value.length < 5) {
+        if (e.target.value.length < 5 && e.target.value !== "") {
             setEmailError("El email debe tener al menos 5 caracteres");
         } else {
             setEmailError("");
@@ -72,7 +72,7 @@ const CreateForm = (props) => {
 
     const handlePassword = (e) => {
         setPassword(e.target.value);
-        if (e.target.value.length < 8) {
+        if (e.target.value.length < 8 && e.target.value !== "") {
             setPasswordError("La contraseña debe tener al menos 8 caracteres");
         }
         else {
@@ -82,7 +82,7 @@ const CreateForm = (props) => {
 
     const handleConfirmPassword = (e) => {
         setConfirmPassword(e.target.value);
-        if (e.target.value !== password) {
+        if (e.target.value !== password && e.target.value !== "") {
             setConfirmPasswordError("Las contraseñas no coinciden");
         }
         else {
